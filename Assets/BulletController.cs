@@ -14,4 +14,10 @@ public class BulletController : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	
+	void OnCollisionEnter(Collision collision) 
+	{
+		GameObject.Destroy(gameObject);
+	}
 }

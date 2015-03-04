@@ -15,9 +15,6 @@ public class TargetCollider : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.tag == "bullet") {
-			GameObject.Destroy(collision.gameObject);
-			GameObject.Destroy(gameObject);
-		}
+		GameObject.Destroy(gameObject);
 	}
 }
