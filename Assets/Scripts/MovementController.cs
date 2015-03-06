@@ -6,13 +6,9 @@ public class MovementController : MonoBehaviour {
 	public float force = 50f;
 	public float turnSpeed = 50f;
 
-	public GameObject bullet;
-
-	Transform bulletSpawn;
 
 	// Use this for initialization
 	void Start () {
-		bulletSpawn = transform.Find("BulletSpawn").transform;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +21,6 @@ public class MovementController : MonoBehaviour {
 			transform.RotateAround(transform.position, transform.up, -turnSpeed * Time.deltaTime);
 		if(Input.GetKey(KeyCode.RightArrow))
 			transform.RotateAround(transform.position, transform.up, turnSpeed * Time.deltaTime);
-		if(Input.GetKeyDown(KeyCode.Space))
-			Instantiate(bullet, bulletSpawn.position, transform.rotation);
+
 	}
 }
