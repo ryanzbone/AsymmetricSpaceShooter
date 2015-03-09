@@ -14,9 +14,9 @@ public class MovementController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKey(KeyCode.UpArrow))
-			rigidbody.AddForce(transform.forward * force);
+			GetComponent<Rigidbody>().AddForce(transform.forward * force);
 		if(Input.GetKey(KeyCode.DownArrow))
-			rigidbody.AddForce(transform.forward * -force);
+			GetComponent<Rigidbody>().AddForce(transform.forward * -force);
 		if(Input.GetKey(KeyCode.LeftArrow))
 			transform.RotateAround(transform.position, transform.up, -turnSpeed * Time.deltaTime);
 		if(Input.GetKey(KeyCode.RightArrow))

@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletController : WeaponDamage {
-
-	float bullet_force = 1000f;
-
+public class LaserBoltController : WeaponDamage {
+	
+	float bullet_force = 2000f;
+	
 	void Start () {
-		Damage = 1;
+		Damage = 2;
 		GetComponent<Rigidbody>().AddForce(bullet_force * transform.forward);
 	}
 
+	
 	void OnCollisionEnter(Collision collision) 
 	{
 		GameObject.Destroy(gameObject);

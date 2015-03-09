@@ -28,17 +28,17 @@ public class ThrusterScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKey(KeyCode.LeftShift)) {
-			rigidbody.velocity = Vector3.zero;
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
 			fps.SetActive(false);
 			bps.SetActive(false);
 		}
 		if(Input.GetKey(up)) {
-			rigidbody.AddForce(transform.forward * force);
+			GetComponent<Rigidbody>().AddForce(transform.forward * force);
 			fps.SetActive(true);
 			bps.SetActive(false);
 		}
 		if(Input.GetKey(down)) {
-			rigidbody.AddForce(transform.forward * -force);
+			GetComponent<Rigidbody>().AddForce(transform.forward * -force);
 			fps.SetActive(false);
 			bps.SetActive(true);
 
