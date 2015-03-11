@@ -20,9 +20,7 @@ public class RocketController : MonoBehaviour {
 
 		Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
 		foreach (Collider hit in colliders) {
-			Debug.Log("hit collider");
 			if (hit && hit.attachedRigidbody) {
-				Debug.Log(1);
 				hit.attachedRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
 		}

@@ -8,13 +8,11 @@ public class RocketLauncher : MonoBehaviour {
 	Transform bulletSpawn;
 	bool controllingRocket;
 	
-	// Use this for initialization
 	void Start () {
 		controllingRocket = false;
 		bulletSpawn = transform.Find("RocketSpawn").transform;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Space) && !controllingRocket)
 		{
