@@ -4,6 +4,7 @@ using System.Collections;
 public class RocketController : MonoBehaviour {
 
 	public float rocketForce, turnSpeed, explosionRadius, explosionForce;
+	public RocketLauncher RocketLauncher;
 
 	void Update () {
 		GetComponent<Rigidbody>().AddForce(rocketForce * transform.forward);
@@ -25,7 +26,7 @@ public class RocketController : MonoBehaviour {
 				hit.attachedRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
 		}
-
+		RocketLauncher.Reload();
 		GameObject.Destroy(gameObject);
 	}
 }

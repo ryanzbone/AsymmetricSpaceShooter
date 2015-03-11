@@ -8,7 +8,6 @@ public class TargetSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		size = 10;
 		PlaceTargets ();
 		Debug.Log(size);
 	}

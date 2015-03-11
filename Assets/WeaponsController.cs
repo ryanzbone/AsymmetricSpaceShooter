@@ -7,11 +7,16 @@ public class WeaponsController : MonoBehaviour {
 	public List<GameObject> weapons;
 
 	void Start () {
-		weapons.Add(transform.Find("Laser").gameObject);
-		weapons.Add(transform.Find("SimpleGun").gameObject);
-		foreach(GameObject weapon in weapons) {
-			weapon.SetActive(false);
+		foreach(Transform child in transform)
+		{
+			weapons.Add (child.gameObject);
+			child.gameObject.SetActive(false);
 		}
+//		weapons.Add(transform.Find("Laser").gameObject);
+//		weapons.Add(transform.Find("SimpleGun").gameObject);
+//		foreach(GameObject weapon in weapons) {
+//			weapon.SetActive(false);
+//		}
 		currentWeapon = 0;
 		weapons[currentWeapon].SetActive(true);
 	}

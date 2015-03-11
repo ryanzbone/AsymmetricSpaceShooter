@@ -15,6 +15,6 @@ public class TargetCollider : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		GameObject.Destroy(gameObject);
+//		GameObject.Destroy(gameObject);
 	}
 }
