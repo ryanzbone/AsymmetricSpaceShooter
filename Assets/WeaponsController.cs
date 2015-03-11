@@ -12,11 +12,7 @@ public class WeaponsController : MonoBehaviour {
 			weapons.Add (child.gameObject);
 			child.gameObject.SetActive(false);
 		}
-//		weapons.Add(transform.Find("Laser").gameObject);
-//		weapons.Add(transform.Find("SimpleGun").gameObject);
-//		foreach(GameObject weapon in weapons) {
-//			weapon.SetActive(false);
-//		}
+
 		currentWeapon = 0;
 		weapons[currentWeapon].SetActive(true);
 	}
