@@ -35,3 +35,7 @@
    - [ ] manual
  - [ ] synchronous resonance
  - [ ] physics simulation for thrusters on different size/mass objects
+
+
+## dev setup
+* [Unity 5](http://unity3d.com/5)
